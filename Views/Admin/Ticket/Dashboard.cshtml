@@ -1,0 +1,82 @@
+﻿@model List<WebSolutionForModelPharmacies.Models.Ticket>
+
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+
+<div class="page-wrapper">
+
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row">
+
+
+                <div class="col-sm-12">
+                    <ul class="breadcrumb">
+
+                        <h3 class="breadcrumb-item active">Ticket Dashboard!</h3>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Tickets</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Email</th>
+                                        <th>Title</th>
+                                        <th>View</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var ticket in Model)
+                                    {
+                                        <tr>
+                                            <td>@ticket.Id</td>
+                                            <td>@ticket.Customer.Email</td>
+                                            <td>@ticket.Title</td>
+                                            <td><a href="/admin/ticket/content/@ticket.Id">view</a></td>
+                                            <td>@ticket.DateTime</td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+       
+
+
+
+    </div>
+</div>

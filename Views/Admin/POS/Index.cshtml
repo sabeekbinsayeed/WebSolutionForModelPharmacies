@@ -1,0 +1,131 @@
+﻿@model ViewModels.POSViewModel
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+@if (((string)Session["PosOrderSuccess"] != null) && ((string)Session["PosOrderSuccess"] == "PosOrderSuccess"))
+{
+
+     Session["PosOrderSuccess"] = null;
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#exampleModal").modal('show');
+            console.log("fd sdf ");
+        });
+
+        $('body').on('hidden.bs.modal', '#exampleModal', function () {
+            window.alert('hidden event fired!');
+            location.reload();
+        });
+    </script>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    POS order has been placed successfully.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row">
+                <div class="col">
+                    <ul class="breadcrumb">
+                        <h3 class="breadcrumb-item">Point Of Sale</h3>
+                        <li class="breadcrumb-item active">Products</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 ">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="row">
+            @foreach (WebSolutionForModelPharmacies.Models.Product product in Model.Product)
+            {
+                <div class="col-xl-2 col-sm-6 col-12">
+                    <div class="product">
+                        <div class="product-inner">
+
+                            <img alt="alt" src="@product.Img">
+                            <div class="cart-btns">
+                                <a href="#" class="btn btn-primary addcart-btn" data-toggle="modal" data-target="#myModal@(product.Id)">Add to cart</a>
+                                <a href="#" class="btn btn-info proedit-btn">Edit</a>
+                            </div>
+                        </div>
+                        <div class="pro-desc">
+                            <h5><a href="product-details.html">@product.Title</a></h5>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal fade" id="myModal@(product.Id)" role="dialog">
+                    <div class="modal-dialog">
+
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">@(product.Title)</h4>
+
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/admin/pos/cart" method="post">
+                                    <h6>Pricing: </h6>
+                                    @if (Model.Pricing.Count > 0)
+                                    {
+                                        foreach (var price in Model.Pricing)
+                                        {
+                                            if (price.Product == product)
+                                            {
+                                                <input required type="radio" name="priceId" value="@price.Id" /> @price.Title <small>$@(price.sale_price)</small> <br />
+                                            }
+                                        }
+                                    }
+                                    <h6>Qty stock:  @(product.qty_stock)</h6>
+                                    <input placeholder="Quantity" name="quantity" value="1" size="1" type="number"><br />
+                                    <input type="hidden" name="productId" value="@(product.Id)" size="1" type="number"><br />
+                                    <input type="submit" name="submit" class="btn btn-primary btn-block " value="add to cart" />
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            }
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,52 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<div class="preloader">
+    <div class="status-mes">
+        <div class="bigSqr">
+            <div class="square first"></div>
+            <div class="square second"></div>
+            <div class="square third"></div>
+            <div class="square fourth"></div>
+        </div>
+        <div class="text_loading text-center">loading</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="~/Assets/js/ocrad.js"></script>
+
+<img id="image" src="@Model.PrescriptionPath" alt="Alternate Text" />
+
+<script>
+    var image = document.getElementById('image');
+    var string = OCRAD(image);
+
+    var finalString = string.replace(/\s|[0-9]|\W|[#$%^&*()]/g, "-");
+
+    console.log(finalString);
+
+    window.location.href = "/home/prescription/handle/?key=" + finalString;
+    /*
+      $.post("/home/prescription/handle/",
+      {
+        name: finalString,
+        city: "Duckburg"
+      },
+      */
+
+    //alert(string);
+
+
+</script>

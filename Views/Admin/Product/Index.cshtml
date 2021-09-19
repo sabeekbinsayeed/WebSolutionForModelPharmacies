@@ -1,0 +1,89 @@
+﻿@model ViewModels.AdminDashboardViewModel
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+
+<div class="page-wrapper">
+
+    <div class="content container-fluid">
+
+
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Products</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>title</th>
+                                        <th>exp</th>
+                                        <th>qty_stock</th>
+                                        <th>pricing</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var product in Model.Product)
+                                    {
+                                    <tr>
+                                        <td>@product.Id</td>
+                                        <td>@product.Title</td>
+                                        <td>@product.ExpiryDate</td>
+                                        <td>@product.qty_stock</td>
+
+                                        <td>
+                                            @foreach (var pricing in Model.Pricing)
+                                            {
+                                                if (pricing.Product == product)
+                                                {
+                                                    <p>(@pricing.Title) Stock: @pricing.stock_price Sale: @pricing.sale_price </p>
+                                                }
+                                            }
+
+                                        </td>
+
+
+                                        <td><a href="/admin/product/edit/@product.Id"><i class="fa fa-edit"></i></a></td>
+                                        <td><a href="/admin/product/delete/@product.Id"><i class="fa fa-trash"></i></a></td>
+
+
+
+                                    </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>

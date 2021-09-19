@@ -1,0 +1,53 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="blog_page_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+
+                <div class="single_sidebar category">
+                    <h3 class="sdbr_title">categories</h3>
+                    <div class="sdbr_inner">
+                        <ul>
+                            @Html.Partial("~/Views/Shared/_ProfileSidebarPartial.cshtml")
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-8 col-xs-12">
+
+                <h4 class="post_title"><a href="#">Orders: </a> </h4>
+
+                
+
+                <div class="single_blog">
+                    <div class="blog_content">
+
+
+                        <form action="/profile/upload/prescription/process" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="exampleFormControlFile1">Upload prescription</label>
+                                <input type="file" name="upload_prescription" class="form-control-file" id="exampleFormControlFile1">
+                                <input type="submit" name="submit" class="btn btn-primary btn-danger"  >
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+
+               
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

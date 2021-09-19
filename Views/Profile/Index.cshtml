@@ -1,0 +1,78 @@
+﻿@model ViewModels.ProfileOrderViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div id="blog_page_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-xs-12">
+
+                    <div class="single_sidebar category">
+                        <h3 class="sdbr_title">Sidebar</h3>
+                        <div class="sdbr_inner">
+
+                            @Html.Partial("~/Views/Shared/_ProfileSidebarPartial.cshtml")
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-8 col-xs-12">
+
+                    <h4 class="post_title"><a href="#">Orders: </a> </h4>
+
+                    @foreach (var order in Model.Order)
+                    {
+                        List<string> status = new List<string>();
+                        int cnt = 1;
+
+                        <div class="single_blog">
+                            <div class="blog_content">
+                                <ul>
+                                    <li><i class="fa fa-hand-o-right"></i> <a href="/profile/order/@order.Id/product"> _Order_@order.Id _@order.OrderDateTime </a></li>
+                                    <li><i class="fa fa-book"></i> @order.Street @order.City-@order.Zip</li>
+                                    @foreach (var orderSts in Model.OrderStatus)
+                                    {
+                                        if (order == orderSts.Order)
+                                        {
+                                            foreach (var orderStsType in Model.OrderStatusType)
+                                            {
+                                                if (orderSts.OrderStatusType == orderStsType)
+                                                {
+                                                    cnt++;
+                                                    //19/09/2019 15:48:53
+                                                    status.Add(orderStsType.Title.ToString() + ": " + orderSts.Date.ToString().Split(' ')[0]);
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    <li>
+                                        <div class="progress">
+                                            <div style="width:@(cnt*25)%" aria-valuenow="@((status.Count)*25)" class="progress-bar" role="progressbar" aria-valuemin="100" aria-valuemax="100"></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        @foreach (var sss in status)
+                                        {
+                                            <i class="fa fa-arrow-circle-o-right"></i> @sss
+                                        }
+
+                                    </li>
+
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+        </div>
+    </div>

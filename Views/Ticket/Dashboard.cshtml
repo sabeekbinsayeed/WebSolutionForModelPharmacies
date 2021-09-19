@@ -1,0 +1,58 @@
+﻿@model List<WebSolutionForModelPharmacies.Models.Ticket>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="blog_page_area">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-xs-12">
+
+                <div class="single_sidebar category">
+                    <h3 class="sdbr_title">Sidebar</h3>
+                    <div class="sdbr_inner">
+
+                        @Html.Partial("~/Views/Shared/_ProfileSidebarPartial.cshtml")
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-8 col-xs-12">
+                <br />
+                <h4 class="post_title">Tickets you have created.</h4>
+                <br />
+
+                <div class="single_blog">
+                    <div class="blog_content">
+                        <ul>
+                            @foreach (var tickets in Model)
+                            {   
+                                <li><h4><i class="fa fa-hand-o-right"></i> <a href="/ticket/content/@tickets.Id"> @tickets.DateTime : @tickets.Title </a></h4></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="single_blog">
+                    <div class="blog_content">
+                        <h4 class="post_title">Add an ticket</h4><br />
+                                                                 <form action="/ticket/add" method="post">
+                                                                     @*<label for="ticket_title">Ticket Title</label>*@
+                                                                     <input type="text" id="ticket_title" name="ticket_title" placeholder="Ticket Title" />
+                                                                     <input type="submit" class="btn btn-primary" value="Add" />
+                                                                 </form>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

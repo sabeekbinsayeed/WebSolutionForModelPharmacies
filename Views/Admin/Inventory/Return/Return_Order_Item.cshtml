@@ -1,0 +1,69 @@
+﻿@model List<WebSolutionForModelPharmacies.Models.ProductReturn> 
+
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row">
+                   
+                <div class="col-sm-12">
+                        <ul class="breadcrumb">
+                            <h4 class="breadcrumb-item"><a href="index.html">Resell/Return Products</a></h4>
+                            <li class="breadcrumb-item active">Products</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-sm-12">
+                    <div class="card card-table">
+
+                        <div class="card-header">
+                            <h4 class="card-title">Orders</h4>
+                        </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table class="table mb-0 table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>retItemId</th>
+                                        <th>Product Title</th>
+                                        <th>Quantity</th>
+                                        <th>asking Price</th>
+                                        @*<th>sale Price</th>*@
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var returnItem in Model)
+                                    {
+                                    <tr>
+                                        <td>@returnItem.Id</td>
+                                        <td>@returnItem.OrderItem.Product.Title</td>
+                                        <td>@returnItem.Quantity</td>
+                                        <td>@returnItem.asking_price</td>
+                                    </tr>
+                                    }
+                                    
+                                </tbody>
+
+                                </table>
+
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+
+    </div>
+</div>

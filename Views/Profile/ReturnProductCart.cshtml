@@ -1,0 +1,124 @@
+﻿@model ViewModels.ReturnCartDashboardModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <form action="/return/cart/process" method="post">
+
+        <div class="cart_page_area">
+
+            <div class="container">
+                <div class="row">
+                </div>
+
+                    @if (Model.ReturnProductCartModel != null && Model.ReturnProductCartModel.Count() > 0)
+                    {
+
+                        <div class="row">
+
+
+                            <div class="col-md-12">
+                                <h4>Please select an address</h4><br />
+                                @foreach (var address in Model.Address)
+                                {
+                                    <input type="radio" required value="@address.Id" name="addressId" />@address.Details @address.City @(address.Zip)
+                                    <input type="hidden" value="@address.City" name="city@(address.Id)" />
+                                    <input type="hidden" value="@address.Details" name="street@(address.Id)" />
+                                    <input type="hidden" value="@address.Zip" name="zip@(address.Id)" /><br />
+                                }
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="cart_table_area table-responsive">
+                                    <table class="table cart_prdct_table text-center">
+                                        <thead>
+                                            <tr>
+                                                <th class="cpt_no">No.</th>
+                                                <th class="cpt_img">Image</th>
+                                                <th class="cpt_pn">Title</th>
+                                                <th class="cpt_q">Quantity</th>
+                                                <th class="cpt_p">Unit Price</th>
+                                                <th class="cpt_t">Total</th>
+                                                <th class="cpt_r">Remove</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            @{
+                                                int i = 1;
+                                                double totalPrice = 0.00;
+                                            }
+
+                                            @if (Model.ReturnProductCartModel != null && Model.ReturnProductCartModel.Count() > 0)
+                                            {
+                                                int x = 0;
+                                                foreach (var cart in Model.ReturnProductCartModel)
+                                                {
+                                                    
+                                            <tr>
+                                                <td><span class="cp_no">@(i++)</span></td>
+                                                <td>
+                                                    <a href="#" class="cp_img">
+                                                        <img src="@cart.Product.Img" alt="" />
+                                                    </a>
+                                                </td>
+                                                <td><a href="#" class="cp_title">@cart.Product.Title</a></td>
+                                                <td>@cart.Qty</td>
+
+                                                @{
+                                                    totalPrice += cart.Price * cart.Qty;
+                                                }
+
+                                                <td><p class="cp_price">$@cart.Price</p></td>
+                                                <td><p class="cp_price">$@totalPrice</p></td>
+                                                <td><a href="/return/cart/remove/@x" class="btn btn-default cp_remove"><i class="fa fa-trash"></i></a></td>
+                                                        @{x++;}
+                                            </tr>
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8 col-xs-12 cart-actions cart-button-cuppon">
+                                <div class="row">
+
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 col-xs-12 cart-checkout-process text-right">
+                                <div class="wrap">
+                                    <p><span>Subtotal</span><span>$@totalPrice</span></p>
+                                    <input type="hidden" name="subTotal" value="@totalPrice" />
+                                    <input type="submit" name="submit" value="Process to Return" class="btn border-btn" />
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    }
+                    else
+                    {
+
+                        <h4>Empty Return Cart</h4>
+                    }
+
+                </div>
+
+
+
+            </div>
+
+    </form>

@@ -1,0 +1,131 @@
+﻿@model ViewModels.ProfileOrderItemViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@if (((string)Session["ReturnCartAdded"] != null) && (string)Session["ReturnCartAdded"] == "Success")
+{
+    Session["ReturnCartAdded"] = null;
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#myModal").modal('show');
+        });
+
+        $('body').on('hidden.bs.modal', '#myModal', function () {
+            //window.alert('hidden event fired!');
+            location.reload();
+        });
+    </script>
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>Your request to return product has been places successfully.</h4>
+                    <p>Click close to continue.</p>
+                    <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+}
+
+
+
+<div class="cart_page_area">
+    <div class="container">
+        <div class="row">
+
+            <br />
+            <br />
+            @if (System.Web.HttpContext.Current.Session["ReturnCartAdded"] == "Success")
+            {
+                <h2>Added Successfully</h2><a href="/profile/return/cart/dashboard">Click here to go to cart...</a>
+                System.Web.HttpContext.Current.Session["ReturnCartAdded"] = null;
+            }<br /><br /><br />
+
+
+
+
+
+
+
+            <div class="col-sm-12">
+                <div class="cart_table_area table-responsive">
+                    <table class="table cart_prdct_table text-center">
+                        <thead>
+                            <tr>
+                                <th class="cpt_no">No.</th>
+                                <th class="cpt_img">Image</th>
+                                <th class="cpt_pn">Title</th>
+                                <th class="cpt_q">Qty</th>
+                                <th class="cpt_p">Unit Price</th>
+                                <th class="cpt_t">Asking Unit Price</th>
+                                <th class="cpt_r">Add to return cart</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int i = 1;
+                                foreach (var orderItm in Model.OrderItems)
+                                {
+                                    <tr>
+                                        <td>@(i++)</td>
+                                        <td><a href="#" class="cp_img"><img src="@orderItm.Product.Img" alt="" /></a></td>
+                                        <td>@orderItm.Product.Title></td>
+                                        <form action="/profile/product/return/cart/add" method="post">
+                                            <td>
+                                                <div class="cp_quntty">
+                                                    <input name="quantity_return" value="1" size="2" type="number">
+                                                    <input name="product_id" value="@orderItm.Product.Id" type="hidden">
+                                                    <input name="order_item_id" value="@orderItm.Id" type="hidden">
+                                                    <input name="order_id" value="@orderItm.Order.Id" type="hidden">
+                                                </div>
+                                            </td>
+                                            <td>@orderItm.sale_price</td>
+                                            <td><p class="cp_price"><input name="asking_price" placeholder="asking return price" value="@(orderItm.sale_price-(orderItm.sale_price*.25))" size="2" type="number"></p></td>
+                                            <td><button class="btn btn-primar btn-sm">Add</button></td>
+                                        </form>
+
+                                    </tr>
+
+                                }
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-xs-12 cart-actions cart-button-cuppon">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <div class="cart-action">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5">
+                        <div class="cuppon-wrap">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 cart-checkout-process text-right">
+                <div class="wrap">
+                    <a href="/profile/return/cart/dashboard" class="btn border-btn">Go To Return Cart</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

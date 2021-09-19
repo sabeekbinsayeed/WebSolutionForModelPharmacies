@@ -1,0 +1,356 @@
+﻿@model ViewModels.AdminDashboardViewModel
+
+
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+
+<div class="page-wrapper">
+
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <h3 class="page-title">Welcome Admin!</h3>
+                    <ul class="breadcrumb">
+
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        <div class="row">
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="dash-widget-header">
+
+                            <span class="dash-widget-icon bg-primary">
+                                <i class="fe fe-users"></i>
+
+                            </span>
+                            @*<div class="dash-count">
+                                    <i class="fa fa-arrow-up text-success"></i> 17%
+                                </div>*@
+                        </div>
+                        <div class="dash-widget-info">
+
+                            <h3></h3>
+
+                            <h4 class="text-muted">Customers: @Model.TotalCustomer</h4>
+                            <div class="progress progress-sm">
+
+                                <div class="progress-bar bg-primary w-50"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dash-widget-header">
+
+                            <span class="dash-widget-icon bg-success">
+                                <i class="fe fe-money"></i>
+
+                            </span>
+                            <div class="dash-count">
+                                @*<i class="fa fa-arrow-down text-danger"></i> 12%*@
+                            </div>
+                        </div>
+
+                        <div class="dash-widget-info">
+                            <h3></h3>
+
+                            <h4 class="text-muted">Products: @Model.TotalProduct</h4>
+                            <div class="progress progress-sm">
+
+                                <div class="progress-bar bg-success w-50"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="dash-widget-header">
+
+                            <span class="dash-widget-icon bg-danger">
+                                <i class="fe fe-credit-card"></i>
+
+                            </span>
+                            <div class="dash-count">
+                                @*<i class="fa fa-arrow-down text-danger"></i> 12%*@
+                            </div>
+                        </div>
+                        <div class="dash-widget-info">
+                            <h3></h3>
+
+                            <h4 class="text-muted">Order: @Model.TotalOrder</h4>
+                            <div class="progress progress-sm">
+                                <div class="progress-bar bg-danger w-50"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xl-3 col-sm-6 col-12">
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="dash-widget-header">
+
+                            <span class="dash-widget-icon bg-warning">
+                                <i class="fe fe-folder"></i>
+                            </span>
+                            <div class="dash-count">
+
+                                @*<i class="fa fa-arrow-up text-success"></i> 17%*@
+                            </div>
+                        </div>
+
+                        <div class="dash-widget-info">
+                            <h4 class="text-muted">Revenue: $@Model.TotalRevenue</h4>
+                            <div class="progress progress-sm">
+
+                                <div class="progress-bar bg-warning w-50"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Products</h4>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table class="table mb-0">
+
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>title</th>
+
+                                        <th>exp</th>
+                                        <th>qty_stock</th>
+                                        <th>pricing</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var product in Model.Product)
+                                    {
+                                        <tr>
+                                            <td>@product.Id</td>
+                                            <td>@product.Title</td>
+                                            <td>@product.ExpiryDate</td>
+                                            <td>@product.qty_stock</td>
+
+                                            <td>
+                                                @foreach (var pricing in Model.Pricing)
+                                                {
+                                                    if (pricing.Product == product )
+                                                    {
+                                                        <p>(@pricing.Title) Stock: @pricing.stock_price Sale: @pricing.sale_price </p>
+                                                    }
+                                                }
+
+                                            </td>                                            
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+
+                <div class="row">
+                    
+                                       
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="card-header">
+
+
+                                <h4 class="card-title">Category</h4>
+
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+
+                                    <table class="table table-striped mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Id</th>
+                                                <th>Title</th>
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            @foreach (var category in Model.Category)
+                                            {
+                                            <tr>
+                                                <td>@category.Id</td>
+                                                <td>@category.Title</td>
+                                            </tr>
+                                            }
+                                            
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                           
+                    <div class="col-md-12">
+                        <div class="card">
+
+
+                            <div class="card-header">
+
+                                <h4 class="card-title">Supplier</h4>
+                            </div>
+
+                            <div class="card-body">
+                                <div class="table-responsive">
+
+                                    <table class="table table-striped mb-0">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Id</th>
+                                                <th>Title</th>
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            @foreach (var supplier in Model.Supplier)
+                                            {
+                                                <tr>
+                                                    <td>@supplier.Id</td>
+                                                    <td>@supplier.Title</td>
+                                                </tr>
+                                            }
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                                                           
+                    <div class="col-md-12">
+                        <div class="card">
+
+                            <div class="card-header">
+
+                                <h4 class="card-title">Brand</h4>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Id</th>
+                                                <th>Title</th>
+                                            </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                            @foreach (var brand in Model.Brand)
+                                            {
+                                                <tr>
+                                                    <td>@brand.Id</td>
+                                                    <td>@brand.title</td>
+                                                </tr>
+                                            }
+                                            
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>

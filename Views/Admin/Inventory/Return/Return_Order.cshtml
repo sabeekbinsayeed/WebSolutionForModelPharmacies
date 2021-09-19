@@ -1,0 +1,133 @@
+﻿@model List<WebSolutionForModelPharmacies.Models.ProductReturnOrder>
+
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+<div class="page-wrapper">
+
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row">
+
+                    <div class="col-sm-12">
+                        <ul class="breadcrumb">
+                            <h4 class="breadcrumb-item"><a href="index.html">Resell/Return Dashboard</a></h4>
+                        </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                    <div class="card card-table">
+
+                        <div class="card-header">
+                            <h4 class="card-title">Orders</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+
+
+                            <table class="table mb-0 table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>email</th>
+                                        <th>return products</th>
+                                        <th>total asking price</th>
+                                        @*<th>total sale price</th>*@
+                                        <th>date</th>
+                                        <th>status</th>
+                                        @*
+            <th>Status Date</th>
+        <th>Payment</th>*@
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var order in Model)
+                                    {
+                                    <tr>
+                                        <td>@(order.Id)</td>
+
+                                        @{
+                                            //WebSolutionForModelPharmacies.Models.Customer customer = Model.Customers.Where(c => c.Id == order.Customer);
+                                        }
+
+                                        <td>
+                                            @if (order.Customer != null)
+                                            {@order.Customer.Email }
+                                        else
+                                        { <p>N/A</p>}
+                                        </td>
+
+                                        <td><a href="/admin/inventory/return_order/@(order.Id)/products">view products</a></td>
+                                        <td>$@(order.TotalAskingPrice)</td>
+                                        @*<td>$@(order.TotalSalePrice)</td>*@
+                                        <td>@(order.DateTime.ToString())</td>
+
+
+                                        <script>
+                                            function test(a) {
+                                                var x = (a.value || a.options[a.selectedIndex].value);  //crossbrowser solution =)
+                                                //alert(x);
+                                                window.location = x;
+                                            }
+                                        </script>
+
+
+
+                                        <td>
+                                            <select onchange="test(this)" id="select_id">
+
+                                                <option value="">@order.Status</option>
+
+                                                <option value="/admin/inventory/order/@(order.Id)/status/accept">Accepted</option>
+                                                <option value="/admin/inventory/order/@(order.Id)/status/reject">Rejected</option>
+                                            </select>
+                                        </td>
+
+
+                                        @*
+        <td>
+            <select onchange="test(this)" id="select_id">
+                <option>@(order.OrderStatus)</option>
+                @foreach (var status in Model.OrderStatusType)
+                {
+                    if (order.OrderStatus == status.Title)
+                    {
+                        continue;
+                    }
+                    <option value="/admin/inventory/order/@(order.Id)/status/@(status.Id)/update">@(status.Title)</option>
+                }
+
+            </select>
+        </td>
+                                        *@
+
+
+
+
+                                    </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        </div>  
+                    </div>
+                </div>
+        </div>
+
+
+
+    </div>
+</div>
+

@@ -1,0 +1,80 @@
+﻿@model ViewModels.AdminDashboardViewModel
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+
+<div class="page-wrapper">
+
+        <div class="content container-fluid">
+
+            <div class="row">
+            <div class="col-lg-12">
+
+                    <div class="card">
+                        <div class="card-header">
+
+                            <h4 class="card-title">Stock Status</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>title</th>
+                                        <th>qty_stock</th>
+                                        <th>update quantity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var product in Model.Product)
+                                    {
+                                        <tr>
+                                            <td>@product.Id</td>
+                                            <td>@product.Title</td>
+                                            <td><input id="qty@(product.Id)" type="text" value="@product.qty_stock" /></td>
+
+                                            <script>
+                                            function getQtyRedirect@(product.Id)() {
+                                                // /admin/stock/edit/@product.Id/
+                                                 window.location.href = "/admin/stock/edit/@product.Id/"+document.getElementById("qty@(product.Id)").value;
+                                                 return false;
+                                            }
+
+                                            </script>
+                                            <td><i style="cursor:pointer" onclick="getQtyRedirect@(product.Id)()" class="">Update</i></td>
+
+
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>

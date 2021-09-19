@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="blog_page_area">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-xs-12">
+
+                <div class="single_sidebar category">
+                    <h3 class="sdbr_title">categories</h3>
+                    <div class="sdbr_inner">
+
+                        <ul>
+                            @Html.Partial("~/Views/Shared/_ProfileSidebarPartial.cshtml")
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-8 col-xs-12">
+
+
+                <div class="single_blog">
+                    <div class="blog_content">
+                        
+                        <form action="/profile/change/password" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <h4 class="post_title"><a href="#">Change Password: </a> </h4>
+                                
+                                <label for="OldPassword">Old Password</label>
+                                <input type="password" id="OldPassword" name="OldPassword" class="form-control-file">
+                                
+                                <label for="Password">New Password</label>
+                                <input type="password" id="Password" name="Password" class="form-control-file">
+                                
+                                <label for="Confirm_Password">Confirm Password</label>
+                                <input type="password" id="Confirm_Password" name="Confirm_Password" class="form-control-file">
+                                
+                                <input type="submit" name="submit" class="btn btn-primary btn-danger">
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,239 @@
+﻿@model ViewModels.AdminProductEditModel
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Basic Inputs</h4>
+                        </div>
+
+                        <div class="card-body">
+                        <form action="/admin/product/edit/process" method="post" enctype="multipart/form-data">
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Product Title</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="title" value="@Model.Product.Title">
+                                    <input type="text" class="form-control" name="product_id" value="@Model.Product.Id">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Description</label>
+                                <div class="col-md-10">
+                                    <textarea name="description" rows="5" cols="5" class="form-control" placeholder="Enter text here">@Model.Product.Description</textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Upload an image</label>
+                                <div class="col-md-10">
+                                    <input name="fileAbsolute" class="form-control" type="file">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Chemical Name</label>
+                                <div class="col-md-10">
+                                    <input value="@Model.Product.sci_name" type="text" class="form-control" name="sci_name">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Quantity stock</label>
+                                <div class="col-md-10">
+                                    <input value="@Model.Product.qty_stock" type="text" class="form-control" name="qty_stock" value="0">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Add pricing</label>
+                                <div class="col-md-10">
+                                    @{ 
+
+                                    }
+                                    @foreach (var pricing in Model.Pricing)
+                                    {
+                                        if (pricing.Product == Model.Product)
+                                        {
+                                            <input type="hidden" name="old_pricing_id_0_@(pricing.Id)" value="@(pricing.Id)" placeholder="price title ie; box,file" >
+                                            <input type="text" name="old_pricing_title_0_@(pricing.Id)" value="@(pricing.Title)" placeholder="price title ie; box,file" >
+                                            <input type="text" name="old_stock_price_0_@(pricing.Id)" value="@(pricing.stock_price)" placeholder="stock price" >
+                                            <input type="text" name="old_sale_price_0_@(pricing.Id)" value="@(pricing.sale_price)" placeholder="sale price" >
+                                            <a href="/admin/pricing/remove/@pricing.Id"><i class="fa fa-trash"></i></a>
+                                            <br />
+                                        }
+                                    }
+
+
+
+                                </div>
+                            </div>
+
+
+                            <script>
+                                var i = 1;
+                                function addPricingInput() {
+
+                                    var foo = document.getElementById("fooBar");
+
+                                    var title = document.createElement("input");
+                                    title.setAttribute("type", "text");
+                                    title.setAttribute("name", "pricing_title" + i);
+                                    title.setAttribute("placeholder", "title");
+                                    foo.appendChild(title);
+
+                                    var price = document.createElement("input");
+                                    price.setAttribute("type", "text");
+                                    price.setAttribute("name", "stock_price" + i);
+                                    price.setAttribute("placeholder", "price");
+                                    foo.appendChild(price)
+
+                                    var price = document.createElement("input");
+                                    price.setAttribute("type", "text");
+                                    price.setAttribute("name", "sale_price" + i);
+                                    price.setAttribute("placeholder", "price");
+                                    foo.appendChild(price)
+
+                                    i++;
+
+                                    var price = document.createElement("br");
+                                    foo.appendChild(price)
+
+                                    document.getElementById('noOfPricing').value = i;
+
+
+                                }</script>
+
+
+                            <input type='hidden' value="0" id='noOfPricing' name="noOfPricing" />
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Add pricing</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="pricing_title0" value="" placeholder="price title ie; box,file">
+                                    <input type="text" name="stock_price0" value="" placeholder="stock price" >
+                                    <input type="text" name="sale_price0" value="" placeholder="sale price" >
+                                    <p id="fooBar">&nbsp;<br /></p>
+                                </div>
+                            </div>
+
+                            <input type="button" value="add" onclick="addPricingInput()" />
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Select a supplier</label>
+                                <div class="col-md-10">
+                                    <select name="supplier" class="form-control">
+                                        <option value="0">-- Select --</option>
+                                        @if (Model.Supplier.Count() > 0)
+                                        {
+
+                                            foreach (WebSolutionForModelPharmacies.Models.Supplier sup in Model.Supplier)
+                                            {
+                                                if (sup.Id == Model.Product.SupplierId)
+                                                {
+                                                    <option value="@(sup.Id)" selected>@(sup.Title)</option>
+                                                }
+                                            }
+
+                                            foreach (WebSolutionForModelPharmacies.Models.Supplier sup in Model.Supplier)
+                                            {
+                                                <option value="@(sup.Id)">@(sup.Title)</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>                            
+                            
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Select a Brand</label>
+                                <div class="col-md-10">
+                                    <select name="brand" class="form-control">
+                                        <option value="0">-- Select --</option>
+                                        @if (Model.Brand.Count() > 0)
+                                        {
+
+                                            foreach (WebSolutionForModelPharmacies.Models.Brand sup in Model.Brand)
+                                            {
+                                                if (sup.Id == Model.Product.BrandId)
+                                                {
+                                                    <option value="@(sup.Id)" selected>@(sup.title)</option>
+                                                }
+                                            }
+
+                                            foreach (WebSolutionForModelPharmacies.Models.Brand sup in Model.Brand)
+                                            {
+                                                <option value="@(sup.Id)">@(sup.title)</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+                                                        
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Select a Category</label>
+                                <div class="col-md-10">
+                                    <select name="category" class="form-control">
+                                        <option value="0">-- Select --</option>
+                                        @if (Model.Brand.Count() > 0)
+                                        {
+
+                                            foreach (WebSolutionForModelPharmacies.Models.Category sup in Model.Category)
+                                            {
+                                                if (sup.Id == Model.Product.CategoryId)
+                                                {
+                                                    <option value="@(sup.Id)" selected>@(sup.Title)</option>
+                                                }
+                                            }
+
+                                            foreach (WebSolutionForModelPharmacies.Models.Category sup in Model.Category)
+                                            {
+                                                <option value="@(sup.Id)">@(sup.Title)</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Expiry date</label>
+                                <div class="col-md-10">
+                                    <input value="@Model.Product.ExpiryDate" type="text" class="form-control" name="expiryDate">
+                                </div>
+                            </div>
+
+                            <div class="input-group-append">
+                                <input class="btn btn-primary" type="submit" value="Next">
+                            </div>
+
+                          
+
+
+                        </form>
+    </div>
+                </div>
+
+                
+
+            </div>
+        </div>
+
+    </div>
+</div>

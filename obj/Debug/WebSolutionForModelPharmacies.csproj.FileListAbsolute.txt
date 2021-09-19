@@ -1,0 +1,484 @@
+E:\ISD Project\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.dll.config
+E:\ISD Project\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.pdb
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\csc.exe
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\csc.exe.config
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\csc.rsp
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\csi.exe
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\csi.exe.config
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\csi.rsp
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.AppContext.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Collections.Immutable.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Console.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Compression.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.IO.FileSystem.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Pipes.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Reflection.Metadata.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Security.AccessControl.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Claims.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Principal.Windows.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.ValueTuple.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XPath.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\vbc.exe
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\vbc.exe.config
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\vbc.rsp
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\VBCSCompiler.exe
+E:\ISD Project\WebSolutionForModelPharmacies\bin\roslyn\VBCSCompiler.exe.config
+E:\ISD Project\WebSolutionForModelPharmacies\bin\Antlr3.Runtime.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\EntityFramework.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\EntityFramework.SqlServer.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\Microsoft.Web.Infrastructure.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\Newtonsoft.Json.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.Helpers.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.Mvc.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.Optimization.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.Razor.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Deployment.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.WebPages.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Razor.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\WebGrease.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\EntityFramework.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\EntityFramework.SqlServer.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.Helpers.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.Mvc.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.Optimization.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.Razor.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.WebPages.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Deployment.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Razor.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\Newtonsoft.Json.xml
+E:\ISD Project\WebSolutionForModelPharmacies\bin\Antlr3.Runtime.pdb
+E:\ISD Project\WebSolutionForModelPharmacies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ISD Project\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csprojAssemblyReference.cache
+E:\ISD Project\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.CoreCompileInputs.cache
+E:\ISD Project\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.CopyComplete
+E:\ISD Project\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.dll
+E:\ISD Project\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.pdb
+E:\ISD Project\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Initial_Migration.resources
+E:\ISD Project\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.GenerateResource.cache
+E:\ISD Project\WebSolutionForModelPharmacies\bin\BCrypt.Net-Next.dll
+E:\ISD Project\WebSolutionForModelPharmacies\bin\BCrypt.Net-Next.xml
+E:\ISD Project\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Entity_Update.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.dll.config
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.pdb
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.exe
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.exe.config
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.rsp
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.exe
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.exe.config
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.rsp
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.AppContext.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Collections.Immutable.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Console.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Compression.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.FileSystem.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Pipes.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Reflection.Metadata.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.AccessControl.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Claims.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Principal.Windows.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.ValueTuple.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XPath.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.exe
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.exe.config
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.rsp
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\VBCSCompiler.exe
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\VBCSCompiler.exe.config
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Antlr3.Runtime.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\BCrypt.Net-Next.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\EntityFramework.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\EntityFramework.SqlServer.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Microsoft.Web.Infrastructure.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Newtonsoft.Json.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Helpers.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Mvc.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Optimization.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Razor.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Deployment.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Razor.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\WebGrease.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\BCrypt.Net-Next.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\EntityFramework.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\EntityFramework.SqlServer.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Helpers.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Mvc.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Optimization.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Razor.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Deployment.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Razor.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Newtonsoft.Json.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Antlr3.Runtime.pdb
+E:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csprojAssemblyReference.cache
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Initial_Migration.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.GenerateResource.cache
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.CopyComplete
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.dll
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.pdb
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\WebSolutionForModelPharmacies.dll.config
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\WebSolutionForModelPharmacies.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\WebSolutionForModelPharmacies.pdb
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\csc.exe
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\csc.exe.config
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\csc.rsp
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\csi.exe
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\csi.exe.config
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\csi.rsp
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.Managed.Core.targets
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.AppContext.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Collections.Immutable.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Console.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.IO.Compression.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.IO.FileSystem.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.IO.Pipes.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Reflection.Metadata.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Security.AccessControl.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Security.Claims.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Security.Principal.Windows.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.ValueTuple.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Xml.XmlDocument.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Xml.XPath.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\vbc.exe
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\vbc.exe.config
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\vbc.rsp
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\VBCSCompiler.exe
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\roslyn\VBCSCompiler.exe.config
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\Antlr3.Runtime.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\BCrypt.Net-Next.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\EntityFramework.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\EntityFramework.SqlServer.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\Microsoft.Web.Infrastructure.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\Newtonsoft.Json.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.Helpers.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.Mvc.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.Optimization.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.Razor.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.WebPages.Deployment.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.WebPages.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.WebPages.Razor.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\WebGrease.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\BCrypt.Net-Next.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\EntityFramework.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\EntityFramework.SqlServer.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.Helpers.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.Mvc.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.Optimization.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.Razor.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.WebPages.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.WebPages.Deployment.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\System.Web.WebPages.Razor.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\Newtonsoft.Json.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\Antlr3.Runtime.pdb
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.csprojAssemblyReference.cache
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.csproj.CoreCompileInputs.cache
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.csproj.CopyComplete
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.dll
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.pdb
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.Migrations.Initial_Migration.resources
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.csproj.GenerateResource.cache
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_CustomerId.resources
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Modification.resources
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Mod.resources
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.Migrations.Payment_Date.resources
+E:\ISD Project\WebSolutionForModelPharmaciesV9 cart processes\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Update.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_CustomerId.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Modification.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Mod.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Payment_Date.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Update.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturn_Prescription.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturn_Status.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Shipment_Date.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type1.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type2.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.OrderString.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.order_status_date.resources
+D:\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.dll.config
+D:\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.dll
+D:\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.pdb
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.exe
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.exe.config
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.rsp
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.exe
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.exe.config
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.rsp
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.Managed.Core.targets
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.AppContext.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Collections.Immutable.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Console.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Compression.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.FileSystem.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Pipes.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Reflection.Metadata.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.AccessControl.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Claims.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.ValueTuple.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XPath.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.exe
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.exe.config
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.rsp
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\VBCSCompiler.exe
+D:\Working\WebSolutionForModelPharmacies\bin\roslyn\VBCSCompiler.exe.config
+D:\Working\WebSolutionForModelPharmacies\bin\Antlr3.Runtime.dll
+D:\Working\WebSolutionForModelPharmacies\bin\BCrypt.Net-Next.dll
+D:\Working\WebSolutionForModelPharmacies\bin\EntityFramework.dll
+D:\Working\WebSolutionForModelPharmacies\bin\EntityFramework.SqlServer.dll
+D:\Working\WebSolutionForModelPharmacies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Working\WebSolutionForModelPharmacies\bin\Microsoft.Web.Infrastructure.dll
+D:\Working\WebSolutionForModelPharmacies\bin\Newtonsoft.Json.dll
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.Helpers.dll
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.Mvc.dll
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.Optimization.dll
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.Razor.dll
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Deployment.dll
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.dll
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Razor.dll
+D:\Working\WebSolutionForModelPharmacies\bin\WebGrease.dll
+D:\Working\WebSolutionForModelPharmacies\bin\BCrypt.Net-Next.xml
+D:\Working\WebSolutionForModelPharmacies\bin\EntityFramework.xml
+D:\Working\WebSolutionForModelPharmacies\bin\EntityFramework.SqlServer.xml
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.Helpers.xml
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.Mvc.xml
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.Optimization.xml
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.Razor.xml
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.xml
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Deployment.xml
+D:\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Razor.xml
+D:\Working\WebSolutionForModelPharmacies\bin\Newtonsoft.Json.xml
+D:\Working\WebSolutionForModelPharmacies\bin\Antlr3.Runtime.pdb
+D:\Working\WebSolutionForModelPharmacies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csprojAssemblyReference.cache
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Initial_Migration.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_CustomerId.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Modification.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Mod.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Payment_Date.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Update.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturn_Prescription.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturn_Status.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Shipment_Date.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type1.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type2.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.OrderString.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.order_status_date.resources
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.GenerateResource.cache
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.CoreCompileInputs.cache
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.CopyComplete
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.dll
+D:\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.pdb
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.OrderReturn.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ReturnOrder.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.OrderReturnsWorking.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturnOrder.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.UpdateSomething.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.dll.config
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\WebSolutionForModelPharmacies.pdb
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.exe
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.exe.config
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csc.rsp
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.exe
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.exe.config
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\csi.rsp
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.AppContext.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Collections.Immutable.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Console.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Compression.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.FileSystem.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.IO.Pipes.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Reflection.Metadata.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.AccessControl.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Claims.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Security.Principal.Windows.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.ValueTuple.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XPath.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.exe
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.exe.config
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\vbc.rsp
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\VBCSCompiler.exe
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\roslyn\VBCSCompiler.exe.config
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Antlr3.Runtime.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\BCrypt.Net-Next.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\EntityFramework.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\EntityFramework.SqlServer.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Microsoft.Web.Infrastructure.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Newtonsoft.Json.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Helpers.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Mvc.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Optimization.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Razor.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Deployment.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Razor.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\WebGrease.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\BCrypt.Net-Next.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\EntityFramework.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\EntityFramework.SqlServer.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Helpers.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Mvc.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Optimization.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.Razor.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Deployment.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\System.Web.WebPages.Razor.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Newtonsoft.Json.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Antlr3.Runtime.pdb
+D:\ISD Project\Working\WebSolutionForModelPharmacies\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csprojAssemblyReference.cache
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Initial_Migration.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_CustomerId.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Modification.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Address_Mod.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Payment_Date.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Update.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturn_Prescription.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturn_Status.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Shipment_Date.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type1.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Order_Status_Type2.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.OrderString.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.order_status_date.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.OrderReturn.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ReturnOrder.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.OrderReturnsWorking.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturnOrder.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.UpdateSomething.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.GenerateResource.cache
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.csproj.CopyComplete
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.dll
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.pdb
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturnOrderId.resources
+D:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.add_asking_price_to_product_return.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ProductReturnOrderId.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.add_asking_price_to_product_return.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Ticket.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.ticket_datetime.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.newChange.resources
+E:\ISD Project\Working\WebSolutionForModelPharmacies\obj\Debug\WebSolutionForModelPharmacies.Migrations.Ticket_Who.resources

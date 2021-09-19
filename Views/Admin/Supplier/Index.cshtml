@@ -1,0 +1,128 @@
+﻿@model ViewModels.AdminDashboardViewModel
+
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+
+<div class="page-wrapper">
+
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row">
+
+
+                <div class="col-sm-12">
+                    <ul class="breadcrumb">
+
+                        <h3 class="breadcrumb-item active">Supplier Dashboard!</h3>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Suppliers</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var Supplier in Model.Supplier)
+                                    {
+                                        <tr>
+                                            <td>@Supplier.Id</td>
+
+                                            <td>
+
+                                                <input type="text" id="getCategoryName@(Supplier.Id)" name="categoryTitle@(Supplier.Id)" value="@Supplier.Title" />
+                                                <input type="hidden" id="getCategoryId@(Supplier.Id)" name="categoryId@(Supplier.Id)" value="@Supplier.Id" />
+
+                                            </td>
+
+
+                                            @*<td>@category.ExpiryDate</td>
+                                                <td>@product.qty_stock</td>
+                                                <td><a href="/admin/category/edit/@(category.Id)"><i class="fa fa-edit"></i></a></td>*@
+
+                                            <script>
+                                            function getInput@(Supplier.Id)() {
+                                                var getCategoryName = $("#getCategoryName@(Supplier.Id)").val();
+                                                var getCategoryId = $("#getCategoryId@(Supplier.Id)").val();
+                                                window.location.href = "/admin/supplier/edit/"+getCategoryId+"/"+getCategoryName;
+                                                console.log(getCategoryName);
+                                            }
+                                            </script>
+
+                                            <td><a onclick="getInput@(Supplier.Id)();"><i class="fa fa-edit"></i></a></td>
+                                            <td><a href="/admin/supplier/delete/@(Supplier.Id)"><i class="fa fa-trash"></i></a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                    <div class="card">
+                            <div class="card-header">
+                              
+                                <h4 class="card-title">Add Supplier</h4>
+                            </div>
+                            <div class="card-body">
+                                <form action="/admin/supplier/add/post" method="post" enctype="multipart/form-data">
+
+                             
+                                    <div class="form-group row">
+                                        <label class="col-form-label col-md-2">Supplier Title</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" name="title">
+                                    </div>
+                             
+                                    </div>
+
+
+                            <input type="submit" name="submit" class="btn btn-primary" value="Add" />
+
+
+                        </form>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+
+
+
+    </div>
+</div>

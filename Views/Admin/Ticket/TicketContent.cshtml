@@ -1,0 +1,87 @@
+﻿@model ViewModel.TicketViewModel
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+
+<div class="page-wrapper">
+
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row">
+
+
+                <div class="col-sm-12">
+                    <ul class="breadcrumb">
+
+                        <h3 class="breadcrumb-item active">@Model.Ticket.Title</h3>
+                        <h6 class="breadcrumb-item active">@Model.Ticket.Customer.Email</h6>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Tickets</h4>
+                    </div>
+                    <div style="height:400px;overflow:scroll" class="card-body">
+
+                        
+                        @foreach (var tick in Model.TicketContent)
+                        {
+                            <h5>  <small>@tick.Who</small> @tick.Content <small>@tick.DateTime</small></h5>
+                        }
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/admin/ticket/content/add" method="post" enctype="multipart/form-data">
+
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Reply</label>
+                                <div class="col-md-10">
+                                    <input type="hidden" name="ticket_id" value="@Model.Ticket.Id" />
+                                    <input type="text" class="form-control" name="ticket_content">
+                                    <input type="submit" name="submit" class="btn btn-primary" value="Reply" />
+                                </div>
+
+                            </div>
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

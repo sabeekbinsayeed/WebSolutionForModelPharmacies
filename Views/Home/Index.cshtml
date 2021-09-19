@@ -1,0 +1,182 @@
+﻿@model ViewModels.HomeViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@*
+    @foreach (var product in Model.Product)
+    {
+        @product.Title
+    }
+*@
+
+
+
+<section id="featured_product" class="featured_product_area section_padding">
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+            
+                <div class="caa_form_area">
+                    <div class="caa_form_group">
+                  
+                        <div class="caf_form">
+                            <div class="input-area">
+
+
+                                <input type="text" name="live_search" id="live_search" placeholder="Search medicine...">
+
+                            </div>
+
+
+                            <script>
+                                function showUpload() {
+                                    var x = document.getElementById("uploadDiv");
+                                    if (x.style.display === "none") {
+                                        x.style.display = "block";
+                                    } else {
+                                        x.style.display = "none";
+                                    }
+                                }
+                            </script>
+
+
+
+
+
+                            <div style="display:none" id="uploadDiv">
+                                <form action="/home/prescription/upload/process" method="post" enctype="multipart/form-data">
+
+
+                                    @*<input type="file" name="upload_prescription" id="upload_prescription">
+                                    <input type="submit" name="submit" value="upload" />
+                                        *@
+
+
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input name="upload_prescription" id="upload_prescription" type="file" class="custom-file-input" id="inputGroupFile01"
+                                                   aria-describedby="inputGroupFileAddon01">
+                                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+
+                                        </div>
+                                        <button class="btn btn-file btn-info">Upload</button>
+                                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </form>
+                            </div>
+
+                            <script>
+                                Console.log("@Model.PrescriptionPath");
+                            </script>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <div class="section_title">
+                    <small>or</small>
+                    <h6 style="cursor: pointer;" onclick="showUpload()"> Upload Prescription</h6>
+                    <br />
+                    <h2>Home <span> Page</span></h2>
+                    <div class="divider"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-center" id="SearchResultAppend">
+
+            @if (Model.Product != null)
+            {
+                foreach (var product in Model.Product)
+                {
+
+                    List<WebSolutionForModelPharmacies.Models.Pricing> singlePrice = Model.Price.Where(c => c.Product == product).ToList();
+                    string productUrlTitle = product.Title.Replace(' ', '_');
+
+                    <div class="col-lg-3 col-md-4 col-sm-6 SearchX">
+                        <div class="single_product">
+                            <div class="product_image">
+                                @* image path be like /assets/img/product/2.jpg *@
+                                <img src="@(product.Img)" alt="@(product.Title)" />
+                                <div class="box-content">
+                                    <a href="/product/@(product.Id)/@(productUrlTitle)"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="product_btm_text">
+                                <h4><a href="/">@(product.Title)</a></h4>
+                                @{int i = 0;}
+                                @foreach (var sprice in singlePrice)
+                                {
+                                    <small>@(sprice.Title) </small><small class="price">$@(sprice.sale_price)</small>
+                                    {
+                                        if (i < singlePrice.Count() - 1)
+                                        {
+                                            <small>|</small>
+                                        }
+                                        i++;
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div> <!-- End Col -->
+
+                }
+
+            }
+
+            <script>
+                $(document).ready(function () {
+                    $("#live_search").on("keyup", function () {
+                        var inputText = $(this).val().toLowerCase();
+
+                        $.ajax({
+                            type: "POST",
+                            url: "/search",
+                            "data": "{inputText:'" + inputText + "' }",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (data) {
+                                var div = "";
+                                var title = "";
+                                $.each(data, function (i, v) {
+                                    div += '<div class="col-lg-3 col-md-4 col-sm-6"><div class="single_product"><div class="product_image"><img src="' + v.Img + '" alt="' + v.Title + '" /><div class="box-content"><a href="/product/' + v.Id + '/' + v.Title + '"><i class="fa fa-search"></i></a></div></div><div class="product_btm_text"><h4><a href="/">' + v.Title + '</a></h4></div></div></div>';
+                                    $("#SearchResultAppend").html(div);
+                                });
+                            }
+                        });
+                    });
+                });
+            </script>
+
+
+        </div>
+
+
+    </div>
+</section>

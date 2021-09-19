@@ -1,0 +1,105 @@
+﻿@model ViewModels.OrderViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="checkout_page">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    <form action="/order/place" method="post">
+
+                    <div class="form-group">
+                        Select a shipping address: <br />
+                        @foreach (var adrs in Model.Address)
+                        {
+                            <input type="radio" name="selectedAddress" value="@adrs.Id"> @adrs.Details <br />
+                        }
+
+                        <input type="radio" name="selectedAddress" value="0"> Or add a shipping address:
+                    
+                    </div>
+
+                        <div class="form-group">
+                            <div class="login_email">
+
+                                <label>City</label>
+                                <div class="input-area">
+                                    <input type="text" name="city" />
+                                </div>
+                            </div>
+                            <div class="login_email">
+                                <label>Zip</label>
+                                <div class="input-area">
+                                    <input type="number" name="zip" oninput="this.value=this.value.replace(/[^0-9]/g,'');" />
+                                </div>
+                            </div>
+                            <div class="login_email">
+                                <label>Street</label>
+                                <div class="input-area">
+                                    <textarea name="details" rows="4" cols="50"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <input type="radio" name="paymentType" value="0"> Cash on delivery
+                            <br />
+                            or<br />
+                            <input type="radio" name="paymentType" value="1"> Pay Using Card
+                            <br />
+
+                            <div class="login_email">
+                                <label>Name On Card</label>
+                                <div class="input-area">
+                                    <input type="text" name="NameOnCard" />
+                                </div>
+                            </div>
+
+                            <div class="login_email">
+                                <label>Card Number</label>
+                                <div class="input-area">
+                                    <input type="text" name="CardNumber" />
+                                </div>
+                            </div>
+
+                            <div class="login_email">
+                                <label>Expiration Date</label>
+                                <div class="input-area">
+                                    <input type="date" name="ExpirationDate" />
+                                </div>
+                            </div>
+
+                            <div class="login_email">
+                                <label>Billing Address</label>
+                                <div class="input-area">
+                                    <input type="text" name="BillingAddress" />
+                                </div>
+                            </div>
+
+                            <div class="login_email">
+                                <label>SecurityCode</label>
+                                <div class="input-area">
+                                    <input type="text" name="SecurityCode" value="0" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="qc-button">
+                            <input type="submit" name="submit" class="btn border-btn" value="Place Order" />
+                        </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+

@@ -1,0 +1,317 @@
+﻿@model ViewModels.AdminProductViewModel
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Insert Product</h4>
+                        </div>
+                        <div class="card-body">
+
+                        <form action="/admin/product/add/post" method="post" enctype="multipart/form-data">
+
+                            <div class="form-group row">
+
+                                <label class="col-form-label col-md-2">Product Title</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="title">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+
+                                <label class="col-form-label col-md-2">Description</label>
+                                <div class="col-md-10">
+                                    <textarea name="description" rows="5" cols="5" class="form-control" placeholder="Enter text here"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group row">
+
+                                <label class="col-form-label col-md-2">Upload an image</label>
+                                <div class="col-md-10">
+                                    <input name="fileAbsolute" class="form-control" type="file">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Chemical Name</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="sci_name">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Quantity stock</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="qty_stock" value="0">
+                                </div>
+                            </div>
+
+                            <script>
+                                var i = 1;
+                                function addPricingInput() {
+
+                                    var foo = document.getElementById("fooBar");
+
+                                    var title = document.createElement("input");
+                                    title.setAttribute("type", "text");
+                                    title.setAttribute("name", "pricing_title" + i);
+                                    title.setAttribute("placeholder", "title");
+                                    foo.appendChild(title);
+
+                                    var price = document.createElement("input");
+                                    price.setAttribute("type", "text");
+                                    price.setAttribute("name", "stock_price" + i);
+                                    price.setAttribute("placeholder", "price");
+                                    foo.appendChild(price)
+
+                                    var price = document.createElement("input");
+                                    price.setAttribute("type", "text");
+                                    price.setAttribute("name", "sale_price" + i);
+                                    price.setAttribute("placeholder", "price");
+                                    foo.appendChild(price)
+
+                                    i++;
+
+                                    var price = document.createElement("br");
+                                    foo.appendChild(price)
+
+                                    document.getElementById('noOfPricing').value = i;
+
+
+                                }</script>
+
+
+                            <input type='hidden' id='noOfPricing' name="noOfPricing"/>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Add pricing</label>
+                                <div class="col-md-10">
+                                    <input type="text" name="pricing_title0" value="" placeholder="price title ie; box,file" required>
+                                    <input type="text" name="stock_price0" value="" placeholder="stock price" required>
+                                    <input type="text" name="sale_price0" value="" placeholder="sale price" required>
+                                    <p id="fooBar">&nbsp;<br /></p>
+                                </div>
+                            </div>
+
+                            <input type="button" value="add" onclick="addPricingInput()" />
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Select a supplier</label>
+                                <div class="col-md-10">
+                                    <select name="supplier" class="form-control">
+                                        <option value="0">-- Select --</option>
+                                        @if (Model.Supplier.Count() > 0)
+                                        {
+                                            foreach (WebSolutionForModelPharmacies.Models.Supplier sup in Model.Supplier)
+                                            {
+                                                <option value="@(sup.Id)">@(sup.Title)</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Select a Brand</label>
+                                <div class="col-md-10">
+                                    <select name="brand" class="form-control">
+                                        <option value="0">-- Select --</option>
+
+                                        @if (Model.Brand.Count() > 0)
+                                        {
+                                            foreach (WebSolutionForModelPharmacies.Models.Brand brand in Model.Brand)
+                                            {
+                                                <option value="@(brand.Id)">@(brand.title)</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Select a Category</label>
+                                <div class="col-md-10">
+                                    <select name="category" class="form-control">
+                                        <option value="0">-- Select --</option>
+                                        @if (Model.Category.Count() > 0)
+                                        {
+                                            foreach (WebSolutionForModelPharmacies.Models.Category category in Model.Category)
+                                            {
+                                                <option value="@(category.Id)">@(category.Title)</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Expiry date</label>
+                                <div class="col-md-10">
+                                    <input type="date" class="form-control" name="expiryDate">
+                                </div>
+                            </div>
+
+                            <div class="input-group-append">
+                                <input class="btn btn-primary" type="submit" value="Next">
+                            </div>
+
+                            @*
+        <div class="form-group row">
+            <label class="col-form-label col-md-2">Disabled Input</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" disabled="disabled">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-2">Readonly Input</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" value="readonly" readonly="readonly">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-2">Placeholder</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" placeholder="Placeholder">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-2">File Input</label>
+            <div class="col-md-10">
+                <input class="form-control" type="file">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-2">Default Select</label>
+            <div class="col-md-10">
+                <select class="form-control">
+                    <option>-- Select --</option>
+                    <option>Option 1</option>
+                    <option>Option 2</option>
+                    <option>Option 3</option>
+                    <option>Option 4</option>
+                    <option>Option 5</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-2">Radio</label>
+            <div class="col-md-10">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="radio"> Option 1
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="radio"> Option 2
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="radio"> Option 3
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-2">Checkbox</label>
+            <div class="col-md-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkbox"> Option 1
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkbox"> Option 2
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" name="checkbox"> Option 3
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-form-label col-md-2">Textarea</label>
+            <div class="col-md-10">
+                <textarea rows="5" cols="5" class="form-control" placeholder="Enter text here"></textarea>
+            </div>
+        </div>
+        <div class="form-group mb-0 row">
+            <label class="col-form-label col-md-2">Input Addons</label>
+            <div class="col-md-10">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                    </div>
+                    <input class="form-control" type="text">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">Button</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+                            *@
+
+
+                        </form>
+    </div>
+                </div>
+
+                @*
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Input Sizes</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="#">
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Large Input</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control form-control-lg" placeholder=".form-control-lg">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-form-label col-md-2">Default Input</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" placeholder=".form-control">
+                                </div>
+                            </div>
+                            <div class="form-group mb-0 row">
+                                <label class="col-form-label col-md-2">Small Input</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control form-control-sm" placeholder=".form-control-sm">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                    *@
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

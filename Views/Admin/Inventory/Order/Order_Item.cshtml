@@ -1,0 +1,88 @@
+﻿@model List<WebSolutionForModelPharmacies.Models.OrderItem> 
+
+
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+
+                        <h3 class="page-title">Orders</h3>
+                        <ul class="breadcrumb">
+
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Orders</li>
+
+                        </ul>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Orders</h4>
+
+                    </div>
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+
+                            <table class="table mb-0 table-hover">
+
+                                <thead>
+                                    <tr>
+                                        <th>OrderItemId</th>
+                                        <th>Product Id</th>
+                                        <th>Product Title</th>
+                                        <th>Quantity</th>
+                                        <th>Stock Price</th>
+                                        <th>Sale Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var orderitem in Model)
+                                    {
+                                    <tr>
+                                        <td>@orderitem.Id</td>
+                                        @if (orderitem.Product != null)
+                                        {
+                                            <td>@orderitem.Product.Id</td>
+                                            <td>@orderitem.Product.Title</td>
+                                        }
+                                        else
+                                        {
+                                            <td>N/A</td>
+                                            <td>N/A</td>
+                                        }
+                                        <td>@orderitem.qty</td>
+                                        <td>@orderitem.stock_price</td>
+                                        <td>@orderitem.sale_price</td>
+                                    </tr>
+                                    }
+                                    
+                                </tbody>
+
+                                </table>
+
+
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+    </div>
+</div>

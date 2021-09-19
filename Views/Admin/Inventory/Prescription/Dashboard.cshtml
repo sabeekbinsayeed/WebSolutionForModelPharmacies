@@ -1,0 +1,68 @@
+﻿@model List<WebSolutionForModelPharmacies.Models.Prescription>
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<style>
+
+    .skin-settings .skin-sett-icon {
+        display: none
+    }
+</style>
+
+
+<div class="page-wrapper">
+
+    <div class="content container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Prescription</h4>
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>id</th>
+                                        <th>email</th>
+                                        <th>view</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var pres in Model)
+                                    {
+                                        <tr>
+                                            <td>@pres.Id</td>
+                                            <td>@pres.Cutomer.Email</td>
+                                            <td><a href="@pres.PrescriptionImg"><img style="height:80px;width:80px" src="@pres.PrescriptionImg"/></a></td>
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>

@@ -1,0 +1,88 @@
+﻿
+@{
+    Layout = null;
+}
+
+@if ((string)Session["AdminError"] != null)
+{
+    <h4 class="text-danger">Admin Error</h4>
+
+    Session["AdminError"] = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <title>Admin</title>
+		        <link rel="shortcut icon" type="image/x-icon" href="~/Assets/admin/assets/img/favicon.png">
+
+        <link rel="stylesheet" href="~/Assets/admin/assets/css/bootstrap.min.css">
+		
+        <link rel="stylesheet" href="~/Assets/admin/assets/css/font-awesome.min.css">
+		        <link rel="stylesheet" href="~/Assets/admin/assets/css/style.css">
+		
+
+    <style>
+
+        .skin-settings .skin-sett-icon{
+            display:none
+        }
+    </style>
+    </head>
+    <body>
+	        <div class="main-wrapper login-body">
+            <div class="login-wrapper">
+            	<div class="container">
+                	<div class="loginbox">
+
+                    	<div class="login-left">
+							<img class="img-fluid" src="~/Assets/admin/assets/img/logo.jpg" alt="Logo" >
+                        </div>
+
+                        <div class="login-right">
+                            <div class="login-right-wrap">
+                                <h1>Login</h1>
+                                <p class="account-subtitle">
+                                    Access to admin dashboard<br />
+                                    <small>email: admin</small><br />
+                                    <small>password: admin</small>
+                                </p>
+                                
+
+
+                                <form action="/admin/login/post" method="post">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" placeholder="Email" name="email">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input class="form-control" type="password" placeholder="Password" name="password">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-block" type="submit">Login</button>
+                                    </div>
+                                </form>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="~/Assets/admin/assets/js/jquery-3.2.1.min.js"></script>
+		
+        <script src="~/Assets/admin/assets/js/popper.min.js"></script>
+        <script src="~/Assets/admin/assets/js/bootstrap.min.js"></script>
+				<script src="~/Assets/admin/assets/js/script.js"></script>
+		
+    </body>
+
+</html>

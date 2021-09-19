@@ -1,0 +1,116 @@
+﻿@model ViewModels.CartViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="cart_page_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="cart_table_area table-responsive">
+                        <table class="table cart_prdct_table text-center">
+                            <thead>
+                                <tr>
+                                    <th class="cpt_no">No.</th>
+                                    <th class="cpt_img">image</th>
+                                    <th class="cpt_pn">product name</th>
+                                    <th class="cpt_q">quantity</th>
+                                    <th class="cpt_p">price</th>
+                                    <th class="cpt_t">total</th>
+                                    <th class="cpt_r">remove</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                @{ 
+                                    int i = 1;
+                                    double totalPrice = 0.00;
+
+                                }
+
+                                @if (Model.CartItems != null){
+                                     foreach (var cart in Model.CartItems){
+                                    <tr>
+                                        <td><span class="cp_no">@(i++)</span></td>
+                                        <td>
+                                            <a href="#" class="cp_img">
+                                                <img src="@cart.Product.Img" alt="" />
+                                            </a>
+                                        </td>
+                                        <td><a href="#" class="cp_title">@cart.Product.Title</a></td>
+                                        <td>
+                                            <div class="cp_quntty">
+
+                                                <script>
+                                                    function newLocation@(cart.CartId)() {
+
+                                                            //document.getElementById(qtyy@(cart.CartId)).innerHTML = inpObj.validationMessage;
+
+                                                            var _qty = document.getElementById("qtyy@(cart.CartId)");
+
+                                                            @*
+                                                            if (_qty.value > @(cart.Product.qty_stock)) {
+                                                                _qty.setCustomValidity("stock quantity exceeded");
+                                                                document.getElementById("cart_btn").classList.add('disabled');
+                                                                document.getElementById("cart_btn").disabled = true;
+                                                            }
+                                                            else {
+                                                                document.getElementById("cart_btn").classList.remove('disabled');
+                                                                document.getElementById("cart_btn").disabled = false;
+                                                                _qty.setCustomValidity('');
+
+
+                                                                var totalQty = document.getElementById("qtyy@(cart.CartId)").value;
+                                                                var diff = document.getElementById("qtyy@(cart.CartId)").value - @cart.Cart_Product_Quantity;
+                                                                window.location = "/cart/increaseQuantity/" +@cart.Product.Id+"/" + diff + "/" +@cart.Pricing.Id;
+                                                            }*@
+
+                                                            
+                                                            var totalQty = document.getElementById("qtyy@(cart.CartId)").value;
+                                                            var diff = document.getElementById("qtyy@(cart.CartId)").value - @cart.Cart_Product_Quantity;
+                                                            window.location = "/cart/increaseQuantity/" +@cart.Product.Id+"/" + diff + "/" +@cart.Pricing.Id;
+
+
+                                                        }
+                                                </script>
+                                                <input name="quantity"  type="number" min="1" max="@cart.Product.qty_stock" id="qtyy@(cart.CartId)" value="@cart.Cart_Product_Quantity" onchange="newLocation@(cart.CartId)()">
+                                        
+                                            </div>
+                                        </td>
+
+                                        @{
+                                            totalPrice += cart.Pricing.sale_price * cart.Cart_Product_Quantity; 
+                                        }
+
+                                        <td><p class="cp_price">$@cart.Pricing.sale_price</p></td>
+                                        <td><p class="cpp_total">$@(cart.Pricing.sale_price * cart.Cart_Product_Quantity)</p></td>
+                                        <td><a href="/cart/remove/@(cart.CartId)" class="btn btn-default cp_remove"><i class="fa fa-trash"></i></a></td>
+                                    </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 col-xs-12 cart-actions cart-button-cuppon">
+                    <div class="row">
+
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12 cart-checkout-process text-right">
+                    <div class="wrap">
+                        <p><span>Subtotal</span><span>$@totalPrice</span></p>
+
+                        <a href="/order/next" id="cart_btn" class=""><button id="cart_btn" class="btn border-btn ">process to checkout</button></a>
+                    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,63 @@
+﻿@model ViewModel.TicketViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="blog_page_area">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-xs-12">
+
+                <div class="single_sidebar category">
+                    <h3 class="sdbr_title">Sidebar</h3>
+                    <div class="sdbr_inner">
+
+                        @Html.Partial("~/Views/Shared/_ProfileSidebarPartial.cshtml")
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-8 col-xs-12">
+                <br />
+                <input type="hidden" name="ticket_id" value="@Model.TicketContent.First().Ticket.Title" />
+
+                <br />
+
+                <div class="single_blog">
+                    <div class="blog_content">
+                        <ul>
+
+                            @if (Model.TicketContent.Count > 0 && Model != null)
+                            {
+                                foreach (var tickets in Model.TicketContent)
+                                {
+                                    <li><h6><i class="fa fa-hand-o-right"></i> @if (tickets.Who != "Admin") { <small>Me: </small> } @tickets.Content <small style="font-size:8px;display:inline">@tickets.DateTime</small></h6> </li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="single_blog">
+                    <div class="blog_content">
+                        <h4 class="post_title">Reply</h4><br />
+                        <form action="/ticket/content/add" method="post">
+                            <input type="hidden" name="ticket_id" value="@Model.TicketContent.First().Ticket.Id" />
+                            <textarea name="ticket_content" rows="3" cols="50"></textarea>
+                            <input type="submit" class="btn btn-primary" value="Reply" />
+                        </form>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

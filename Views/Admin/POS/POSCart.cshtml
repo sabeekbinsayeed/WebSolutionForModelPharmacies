@@ -1,0 +1,85 @@
+﻿@model ViewModels.CartViewModel
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+            <div class="page-header">
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <ul class="breadcrumb">
+
+                            <h2 class="breadcrumb-item"><a href="index.html">Point of sale cart</a></h2>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+
+                    <div class="card card-table">
+                        <div class="card-header">
+                            <h4 class="card-title">Point of sale cart products</h4>
+                        </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+
+                            <table class="table mb-0 table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Cart ID</th>
+                                        <th>Produt Title</th>
+                                        <th>Quantity</th>
+                                        <th>Pricing Title</th>
+                                        <th>Sale Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @if (Model.CartItems != null)
+                                    {
+
+                                        foreach (var cartItem in Model.CartItems)
+                                        {
+                                            <tr>
+                                                <td>@(cartItem.CartId)</td>
+
+                                                <td>@(cartItem.Product.Title)</td>
+
+                                                <td>@(cartItem.Cart_Product_Quantity)</td>
+
+                                                <td>$@(cartItem.Pricing.Title)</td>
+
+                                                <td>@(cartItem.Pricing.sale_price)</td>
+
+                                            </tr>
+                                        }
+
+                                    }
+
+
+                                </tbody>
+
+                            </table>
+                            <br />
+                            <div class="pull-right">
+                                <a href="/admin/cart/order/place"><button class="btn btn-primary btn-block" >Place Order</button></a>
+                            </div>
+
+
+                        </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

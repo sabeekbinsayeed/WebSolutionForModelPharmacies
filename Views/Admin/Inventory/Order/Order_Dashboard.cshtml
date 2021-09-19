@@ -1,0 +1,128 @@
+﻿@model ViewModels.InventoryOrderDashboard
+@{
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+
+        <div class="page-header">
+            <div class="row">
+                <div class="col-sm-12">
+
+
+                    <h3 class="page-title">Orders</h3>
+                    <ul class="breadcrumb">
+
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Orders</li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+
+                    <div class="card-header">
+                        <h4 class="card-title">Orders</h4>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="table-responsive">
+
+
+                            <table class="table mb-0 table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Customer_Email</th>
+                                        <th>Products</th>
+                                        <th>Stock Price</th>
+                                        <th>Sale Price</th>
+                                        <th>Order Date</th>
+                                        <th>Status</th>
+                                        @*
+                <th>Status Date</th>*@
+                <th>Payment</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var order in Model.Orders)
+            {
+            <tr>
+                <td>@(order.Id)</td>
+
+                @{
+                    //WebSolutionForModelPharmacies.Models.Customer customer = Model.Customers.Where(c => c.Id == order.Customer);
+                }
+
+                <td>
+                    @if (order.Customer != null)
+                    {@order.Customer.Email }
+                else
+                { <p>Sale Point</p>}
+                </td>
+
+                <td><a href="/admin/inventory/order/@(order.Id)/orderitems">view products</a></td>
+                <td>$@(order.total_stock_price)</td>
+                <td>$@(order.total_sale_price)</td>
+                <td>@(order.OrderDateTime.ToString())</td>
+
+                <script>
+                    function test(a) {
+                        var x = (a.value || a.options[a.selectedIndex].value);  //crossbrowser solution =)
+                        //alert(x);
+                        window.location = x;
+                    }</script>
+
+                <td>
+                    <select onchange="test(this)" id="select_id">
+                        <option>@(order.OrderStatus)</option>
+                        @foreach (var status in Model.OrderStatusType)
+                        {
+                            if (order.OrderStatus == status.Title)
+                            {
+                                continue;
+                            }
+                            <option value="/admin/inventory/order/@(order.Id)/status/@(status.Id)/update">@(status.Title)</option>
+                        }
+
+                    </select>
+                </td>
+                @*<td>@(order.OrderDateTime.ToString())</td>*@
+
+                @if (order.PaymentMethod == null)
+                {
+                    <td><span class="badge badge-success">Cash on delivery</span></td>
+                }
+                
+                else
+                {
+                    <td><span class="badge badge-success">@order.PaymentMethod.Type</span></td>
+                }
+
+            </tr>
+                }
+                
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        </div>
+
+                    </div>
+
+                </div>
+        </div>
+
+
+
+    </div>
+</div>

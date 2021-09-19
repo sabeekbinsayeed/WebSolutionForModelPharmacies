@@ -1,0 +1,162 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Admin - Dashboard</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="~/Assets/admin/assets/img/favicon.png">
+
+    <link rel="stylesheet" href="~/Assets/admin/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="~/Assets/admin/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Assets/admin/assets/css/feathericon.min.css">
+
+
+    <link rel="stylesheet" href="~/Assets/admin/assets/plugins/morris/morris.css">
+    <link rel="stylesheet" href="~/Assets/admin/assets/css/style.css">
+
+    <style>
+
+        .skin-settings .skin-sett-icon {
+            display: none
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main-wrapper">
+
+        <div class="header">
+
+            <div class="header-left">
+                <a href="~/Assets/admin/index.html" class="logo">
+                    <img src="~/Assets/admin/assets/img/logo.jpg" alt="Logo">
+                </a>
+                <a href="~/Assets/admin/index.html" class="logo logo-small">
+                    <img src="~/Assets/admin/assets/img/logo-small.png" alt="Logo" width="30" height="30">
+                </a>
+            </div>
+
+            <ul class="nav user-menu">
+
+                <li class="nav-item dropdown has-arrow">
+                    <a href="~/Assets/admin/#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <span class="user-img"><img class="rounded-circle" src="~/Assets/admin/assets/img/setting.png" width="31" alt="Ryan Taylor"></span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="user-header">
+                            <div class="avatar avatar-sm">
+                                <img src="~/Assets/admin/assets/img/imagesD.png" alt="User Image" class="avatar-img rounded-circle">
+                            </div>
+                            <div class="user-text">
+                                <h6>Manager</h6>
+                                <p class="text-muted mb-0">Administrator</p>
+                            </div>
+                        </div>
+                        <a class="dropdown-item" href="/admin/settings">Account Settings</a>
+                        <a class="dropdown-item" href="/admin/logout">Logout</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">
+                            <span>Main</span>
+                        </li>
+                        <li class="active">
+                            <a href="/admin/dashboard"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><i class="fe fe-vector"></i> <span> Product</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/admin/product/dashboard">Product Dashboard</a></li>
+                                <li><a href="/admin/Product/add">Add Product</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><i class="fe fe-table"></i> <span> Category</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/admin/category/dashboard">Category Dashboard</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><i class="fe fe-users"></i> <span> Supplier</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/admin/supplier/dashboard">Supplier Dashboard</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="submenu">
+                            <a href=""><i class="fe fe-users"></i> <span> Brand</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/admin/brand/dashboard">Brand Dashboard</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="submenu">
+                            <a href="~/Assets/admin/#"><i class="fe fe-cart"></i> <span> POS</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/admin/pos">POS Dashboard</a></li>
+                                <li><a href="/admin/pos/cart/view">POS Cart</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="submenu">
+                            <a href=""><i class="fe fe-tiled"></i> <span> Inventory</span> <span class="menu-arrow"></span></a>
+                            <ul style="display: none;">
+                                <li><a href="/admin/inventory/order">Order Management</a></li>
+                                <li><a href="/admin/return/order/dashboard">Resell/Return</a></li>
+                                <li><a href="/admin/inventory/stockManagement">Stock Management</a></li>
+                                <li><a href="/admin/inventory/prescription">Prescription</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-title">
+                            <span></span>
+                        </li>
+                        <li>
+
+                            <a href="/admin/ticket/dashboard"><i class="fe fe-messanger"></i> <span>Ticket</span></a>
+                            <a href="/admin/settings"><i class="fe fe-bolt"></i> <span>Settings</span></a>
+                        
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        @RenderBody()
+
+    </div>
+    <script src="~/Assets/admin/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="~/Assets/admin/assets/js/popper.min.js"></script>
+
+    <script src="~/Assets/admin/assets/js/bootstrap.min.js"></script>
+
+    <script src="~/Assets/admin/assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Assets/admin/assets/plugins/raphael/raphael.min.js"></script>
+
+    <script src="~/Assets/admin/assets/plugins/morris/morris.min.js"></script>
+    <script src="~/Assets/admin/assets/js/chart.morris.js"></script>
+
+    <script src="~/Assets/admin/assets/js/script.js"></script>
+
+</body>
+
+</html>

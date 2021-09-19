@@ -1,0 +1,569 @@
+﻿@{
+    Layout = null;
+}
+
+@*foreach (ViewModels.CartViewModel mCart in ViewBag.Cart)
+    {
+
+    }*@
+
+@{ /*
+   var Lst = ViewBag.Cart as IEnumerable<WebSolutionForModelPharmacies.Models.CartItem>;
+
+   foreach (WebSolutionForModelPharmacies.Models.CartItem dd in Lst)
+   {
+       @dd.Cart_Product_Quantity
+   }
+
+if (ViewBag.Cart != null)
+{
+  var Lst = ViewBag.Cart as IEnumerable<WebSolutionForModelPharmacies.Models.CartItem>;
+  foreach (WebSolutionForModelPharmacies.Models.CartItem dd in Lst)
+  {
+      @dd.Cart_Product_Quantity
+  }
+
+}*/
+}
+
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web solution for pharmacies</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+    <link rel="stylesheet" href="~/assets/css/animate.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="~/assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="~/assets/css/meanmenu.min.css" />
+    <link rel="stylesheet" href="~/assets/css/venobox.css" />
+
+    <link rel="stylesheet" href="~/assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/responsive.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+
+
+    @if (((string)Session["LoginSuccess"] != null) && ((string)Session["LoginSuccess"] == "LoginSuccess"))
+    {
+
+        Session["LoginSuccess"] = null;
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myModal").modal('show');
+            });
+
+            $('body').on('hidden.bs.modal', '#myModal', function () {
+                //window.alert('hidden event fired!');
+                location.reload();
+            });
+        </script>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>You have been successfully logged In.</h4>
+                        <p>Click close to continue.</p>
+                        <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+    @if (((string)Session["PasswordReset"] != null) && ((string)Session["PasswordReset"] == "PasswordReset"))
+    {
+
+        Session["PasswordReset"] = null;
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myModal").modal('show');
+            });
+
+            $('body').on('hidden.bs.modal', '#myModal', function () {
+                //window.alert('hidden event fired!');
+                location.reload();
+            });
+        </script>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Your password has been successfully reset.</h4>
+                        <p>Click close to continue.</p>
+                        <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+    @if (((string)Session["PasswordResetConfirmation"] != null) && ((string)Session["PasswordResetConfirmation"] == "PasswordResetConfirmation"))
+    {
+
+        Session["PasswordResetConfirmation"] = null;
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myModal").modal('show');
+            });
+
+            $('body').on('hidden.bs.modal', '#myModal', function () {
+                //window.alert('hidden event fired!');
+                location.reload();
+            });
+        </script>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>
+                            A password recovery has been sent to your email.
+                            Please check your email and reset your password.
+                        </h4>
+                        <p>Click close to continue.</p>
+                        <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+    @if (((string)Session["EmailVerificationSuccess"] != null) && ((string)Session["EmailVerificationSuccess"] == "EmailVerificationSuccess"))
+    {
+        Session["EmailVerificationSuccess"] = null;
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myModal").modal('show');
+            });
+
+            $('body').on('hidden.bs.modal', '#myModal', function () {
+                //window.alert('hidden event fired!');
+                location.reload();
+            });
+        </script>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Your email has been verified successfully.</h4>
+                        <p>Click close to continue.</p>
+                        <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+
+    @if (((string)Session["RgistrationSuccess"] != null) && (string)Session["RgistrationSuccess"] == "RgistrationSuccess")
+    {
+        Session["RgistrationSuccess"] = null;
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myModal").modal('show');
+            });
+
+            $('body').on('hidden.bs.modal', '#myModal', function () {
+                //window.alert('hidden event fired!');
+                location.reload();
+            });
+        </script>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>You have been registered successfully.</h4>
+                        <p>Click close to continue.</p>
+                        <p>Or.</p>
+                        <p><a href="/authentication">Click here to LogIn.</a></p>
+                        <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+    @if (((string)Session["OrderPlaceSuccess"] != null) && (string)Session["OrderPlaceSuccess"] == "OrderPlaceSuccess")
+    {
+        Session["OrderPlaceSuccess"] = null;
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myModal").modal('show');
+            });
+
+            $('body').on('hidden.bs.modal', '#myModal', function () {
+                //window.alert('hidden event fired!');
+                location.reload();
+            });
+        </script>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Your order has been placed successfully.</h4>
+                        <p>Click close to continue.</p>
+                        <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+
+    @if (((string)Session["ReturnCartSuccess"] != null) && (string)Session["ReturnCartSuccess"] == "ReturnCartSuccess")
+    {
+        Session["ReturnCartSuccess"] = null;
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myModal").modal('show');
+            });
+
+            $('body').on('hidden.bs.modal', '#myModal', function () {
+                //window.alert('hidden event fired!');
+                location.reload();
+            });
+        </script>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Your request to return product has been places successfully.</h4>
+                        <p>Click close to continue.</p>
+                        <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+    @if (((string)Session["PasswordChange"] != null) && (string)Session["PasswordChange"] == "PasswordChange")
+    {
+        Session["PasswordChange"] = null;
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#myModal").modal('show');
+            });
+            $('body').on('hidden.bs.modal', '#myModal', function () {
+                //window.alert('hidden event fired!');
+                location.reload();
+            });
+        </script>
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Your password has been changed successfully.</h4>
+                        <p>Click close to continue.</p>
+                        <button data-dismiss="modal" class="btn btn-primary pull-right">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+
+    <header id="header_area">
+
+        <div class="header_btm_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-3">
+                        <a class="logo" href="~/assets/index-2.html"> <img alt="" src="img/logo.png"></a>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-9 text-right">
+                        <div class="menu_wrap">
+                            <div class="main-menu">
+                                <nav>
+                                    <ul>
+                                        <li><a href="/">home</a></li>
+
+
+                                        <li>
+                                            <a href="/contact">Category <i class="fa fa-angle-down"></i></a>
+                                            <!-- Sub Menu -->
+                                            <ul class="sub-menu">
+                                                @foreach (WebSolutionForModelPharmacies.Models.Category cat in ViewBag.Category)
+                                                {
+                                                    <li><a href="/category/@cat.Id">@cat.Title</a></li>
+                                                }
+                                            </ul>
+                                        </li>
+
+                                        <li>
+                                            <a href="">Brand <i class="fa fa-angle-down"></i></a>
+                                            <!-- Sub Menu -->
+                                            <ul class="sub-menu">
+                                                @foreach (WebSolutionForModelPharmacies.Models.Brand brand in ViewBag.Brand)
+                                                {
+                                                    <li><a href="/brand/@brand.Id">@brand.title</a></li>
+                                                }
+                                            </ul>
+                                        </li>
+
+
+
+                                        <li><a href="/contact">contact</a></li>
+
+                                        @if (((WebSolutionForModelPharmacies.Models.Customer)Session["Customer"] != null))
+                                        {
+                                            <li><a href="/profile/dashboard">Account</a></li>
+                                            <li><a href="/authentication/logout">Logout</a></li>
+                                        }
+                                        else
+                                        {
+                                            <li><a href="/authentication">Login</a></li>
+                                        }
+
+
+
+
+                                    </ul>
+                                </nav>
+                            </div> <!--  End Main Menu -->
+
+
+                            <div class="right_menu">
+                                <ul class="nav justify-content-end">
+                                    <li>
+                                        <div class="cart_menu_area">
+                                            <div class="cart_icon">
+                                                <a href="#"><i class="fa fa-shopping-bag " aria-hidden="true"></i></a>
+                                                <span class="cart_number">@ViewBag.CartCount</span>
+                                            </div>
+
+
+                                            <!-- Mini Cart Wrapper -->
+                                            <div class="mini-cart-wrapper">
+                                                <!-- Product List  -->
+                                                <div class="mc-pro-list fix">
+                                                    @{
+                                                        double totalPrice = 0.00;
+                                                    }
+                                                    @if (ViewBag.Cart != null)
+                                                    {
+                                                        int i = 1;
+
+                                                        var Lst = ViewBag.Cart as IEnumerable<WebSolutionForModelPharmacies.Models.CartItem>;
+                                                        foreach (WebSolutionForModelPharmacies.Models.CartItem dd in Lst)
+                                                        {
+
+                                                            <div class="mc-sin-pro fix">
+                                                                <a href="/product/@(dd.Product.Id)/@(dd.Product.Title) " class="mc-pro-image float-left">
+                                                                    <img style="width: 64px;height: 49px" src="@dd.Product.Img" alt="" />
+                                                                </a>
+                                                                <div class="mc-pro-details fix">
+                                                                    <a href="~/assets/#">@dd.Product.Title</a>
+                                                                    <span>@(dd.Cart_Product_Quantity)x$@(dd.Pricing.sale_price)</span>
+                                                                    <a class="pro-del" href="/cart/remove/@(dd.CartId)"><i class="fa fa-times-circle"></i></a>
+                                                                </div>
+                                                            </div>
+
+                                                            totalPrice += dd.Pricing.sale_price * dd.Cart_Product_Quantity;
+
+                                                        }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        <h4>Your cart is empty</h4>
+                                                    }
+
+
+
+                                                    @*
+                                                        <div class="mc-sin-pro fix">
+                                                            <a href="~/assets/#" class="mc-pro-image float-left">
+                                                                <img style="width: 64px;height: 49px" src="~/assets/img/product/1.jpg" alt="" />
+                                                            </a>
+                                                            <div class="mc-pro-details fix">
+                                                                <a href="~/assets/#">This is Product Name</a>
+                                                                <span>1x$25.00</span>
+                                                                <a class="pro-del" href="~/assets/#"><i class="fa fa-times-circle"></i></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mc-sin-pro fix">
+                                                            <a href="~/assets/#" class="mc-pro-image float-left">
+                                                                <img style="width: 64px;height: 49px" src="~/assets/img/product/1.jpg" alt="" />
+                                                            </a>
+                                                            <div class="mc-pro-details fix">
+                                                                <a href="~/assets/#">This is Product Name</a>
+                                                                <span>1x$25.00</span>
+                                                                <a class="pro-del" href="~/assets/#"><i class="fa fa-times-circle"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    *@
+
+
+
+                                                </div>
+                                                <!-- Sub Total -->
+
+                                                @if (ViewBag.Cart != null)
+                                                {
+
+                                                    <div class="mc-subtotal fix">
+                                                        <h4>Subtotal <span>$@totalPrice</span></h4>
+                                                    </div>
+                                                    <!-- Cart Button -->
+                                                    <div class="mc-button">
+                                                        <a href="/cart" class="checkout_btn">go to cart</a>
+                                                    </div>
+                                                    <div class="mc-button">
+                                                        <a href="/order/next" class="checkout_btn">checkout</a>
+                                                    </div>
+
+                                                }
+
+
+
+
+
+
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    @RenderBody()
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer class="footer_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="single_ftr">
+                        <h4 class="sf_title">Contacts</h4>
+                        <ul>
+                            <li>Phone:+012398765</li>
+                            <li>Email: support@websolution.com</li>
+                        </ul>
+                    </div>
+                </div> <!--  End Col -->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="single_ftr">
+                        <h4 class="sf_title">Category</h4>
+                        <ul>
+                            @foreach (WebSolutionForModelPharmacies.Models.Category cat in ViewBag.Category)
+                            {
+                                <li><a href="/category/@cat.Id">@cat.Title</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-6">
+                    <div class="single_ftr">
+                        <h4 class="sf_title">Brand</h4>
+                        <ul>
+                            @foreach (WebSolutionForModelPharmacies.Models.Brand brand in ViewBag.Brand)
+                            {
+                                <li><a href="/brand/@brand.Id">@brand.title</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div> <!--  End Col -->
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="single_ftr">
+                        <div class="newsletter_form">
+                            <address class="f-left"> © 2019 WebSolutionForModelPharmacies | <p>All Rights Reserved.</p> </address>
+                        </div>
+                    </div>
+                </div> <!--  End Col -->
+
+            </div>
+        </div>
+
+
+    </footer>
+    <!--  FOOTER END  -->
+    @*<script src="~/assets/js/vendor/jquery-1.12.4.min.js"></script>
+                <script src="~/assets/js/bootstrap.min.js"></script>
+            <script src="~/assets/js/jquery.meanmenu.min.js"></script>
+            <script src="~/assets/js/jquery.mixitup.js"></script>
+            <script src="~/assets/js/jquery.counterup.min.js"></script>
+            <script src="~/assets/js/waypoints.min.js"></script>
+            <script src="~/assets/js/wow.min.js"></script>
+            <script src="~/assets/js/venobox.min.js"></script>
+            <script src="~/assets/js/owl.carousel.min.js"></script>
+            <script src="~/assets/js/simplePlayer.js"></script>
+        <script src="~/assets/js/main.js"></script>*@
+</body>
+
+</html>

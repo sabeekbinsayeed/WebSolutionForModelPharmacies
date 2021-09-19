@@ -1,0 +1,65 @@
+﻿@model List<WebSolutionForModelPharmacies.Models.Address>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="blog_page_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+
+                <div class="single_sidebar category">
+                    <h3 class="sdbr_title">categories</h3>
+                    <div class="sdbr_inner">
+                        <ul>
+                            @Html.Partial("~/Views/Shared/_ProfileSidebarPartial.cshtml")
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="col-md-8 col-xs-12">
+
+
+                <div class="single_blog">
+                    <div class="blog_content">
+                        <h4 class="post_title"><a href="#">AddressBook: </a> </h4>
+
+                        <ul>
+                            @foreach (WebSolutionForModelPharmacies.Models.Address add in Model)
+                            {
+                                <li> <i class="fa fa-hand-o-right"></i> @add.Details , @add.City-@add.Zip <a href="/profile/address/@add.Id/delete"><i class="fa fa-trash"></i></a></li>
+                            }
+                        </ul>
+                        <br /><br />
+                        <form action="/profile/add/address" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <h4 class="post_title"><a href="#">Add an address: </a> </h4>
+                                <label for="Details">Street</label>
+                                <input type="text" id="Details" name="Details" class="form-control-file">
+                                <label for="City">City</label>
+                                <input type="text" id="City" name="City" class="form-control-file">
+                                <label for="Zip">Zip</label>
+                                <input type="number" id="Zip" name="Zip" class="form-control-file">
+                                <input type="submit" name="submit" class="btn btn-primary btn-danger">
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
